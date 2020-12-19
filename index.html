@@ -20,17 +20,25 @@
     <header class="jumbotron">
         <div class="container">
           <div class="row">
-            <div class="col">
-              <h1>NuCamp</h1>
-              <h2>a better way to camp</h2>
-            </div>
+                <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                    <!-- img-fluid is img-responsive -->
+                    <a href="#"><img src="img/logo.png" class="img-fluid" /></a>
+                </div>
+                <div class="col">
+                    <h1>NuCamp</h1>
+                    <h2>a better way to camp</h2>
+                </div>
+                <div class="col col-md-4 col-lg-2 mt-4">
+                    <a class="btn btn-info text-nowrap" href="#reserveForm" role="button">Reserve Campsite</a>
+                </div>
           </div>
         </div>
     </header>
      
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="nucampNavbar">
@@ -50,9 +58,15 @@
             <h2 class="text-sm-center">Discover & Review</h2>
           </div>
           <div class="col">
-            <h3>Our Campsites</h3>
-            <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
-          </div>
+            <div class="media">
+                <!-- d-flex = bootstrap fix for IE bug/img-thumbnail=gives img rounded border -->
+                <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
+                <div class="media-body align-self-center">
+                    <h3>Our Campsites</h3>
+                    <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
+                </div>
+            </div>
+          </div>    
         </div>
 
         
@@ -61,9 +75,15 @@
               <h2>Featured Campsites</h2>
             </div>
             <div class="col">
-              <h3>React Lake Campground</h3>
-              <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of
-                the pristine React Lake is a favorite for fly fishers.</p>
+                <div class="media">
+                    <!-- d-flex = bootstrap fix for IE bug/img-thumbnail=gives img rounded border -->
+                    <img class="order-sm-last d-flex ml-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="Our Campsite" />
+                    <div class="media-body align-self-center">
+                      <h3>React Lake Campground</h3>
+                      <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of
+                       the pristine React Lake is a favorite for fly fishers.</p>
+                    </div>
+                </div>
             </div>
           </div>
 
@@ -72,9 +92,57 @@
               <h2 class="text-sm-center">Our Community Partners</h2>
             </div>
             <div class="col">
-              <h3>Bootstrap Outfitters</h3>
-              <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+              <div class="media">
+                   <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
+                   <div class="media-body align-self-center">
+                        <h3>Bootstrap Outfitters</h3>
+                        <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+                   </div>
+              </div>
             </div>
+          </div>
+          <div class="row row-content align-items-center">
+              <div class="col-sm-6 mx-auto">
+                 <div class="card">
+                     <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+                     <div class="card-body form-group-row">
+                         <form id="reserveForm">   
+                           <div class="form-group row">
+                               <div class="col-sm-6">
+                                  <label for="numCampers" class="col-form-label">Number of Campers</label>
+                               </div>
+                               <div class="col-sm-6">
+                                    <select  class="col col-form-label" name="numCampers" id="numCampers" >
+                                        <option  selected>Select...</option>
+                                        <option value="1">one</option>
+                                        <option value="2">two</option>
+                                        <option value="3">three</option>
+                                        <option value="4">four</option>
+                                        <option value="5">five</option>
+                                        <option value="6">six</option>
+                                    </select>
+                               </div>
+                            </div>      
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <label class="col-form-label" for="date">Date</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input class="col col-form-label" type="date" id="date" name="date" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary" >Search</button>
+                                </div>
+                            </div>
+                         
+                         </form>
+                     </div>
+                 </div>
+              </div>
+
+
           </div>
         </div>
 

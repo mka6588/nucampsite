@@ -21,6 +21,9 @@
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="row">
+                <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                    <a href="index.html"><img src="img/logo.png" class="img-fluid" /></a>
+                </div>
                 <div class="col">
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
@@ -31,9 +34,14 @@
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+            <!-- <a> tag before the button when collapsed logo on left-->
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" height="30" width="30" /></a>
+            <!-- ml-auto/mr-auto move toggler left or right when collapsed -->
+            <button class="navbar-toggler mr-0" type="button" data-toggle="collapse" data-target="#nucampNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- <a> tag after the button tag when collapsed logo on right-->
+            <!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" height="30" width="30"></a> -->
             <div class="collapse navbar-collapse" id="nucampNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i> Home </a></a></li>
@@ -111,7 +119,7 @@
         </div>
         <div class="row row-content">
             <div class="col-sm-9">
-                <h2>Facts &amp; Figures</h2>
+                <h2>Facts &amp; Figures6</h2>
                 <div class="table-responsive" >
                     <table class="table table-striped">
                         <thead>
