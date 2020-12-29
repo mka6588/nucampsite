@@ -44,8 +44,3 @@ header h2 {
   right: 0;
   bottom: 0;
   z-index: 100; }
-
-.carousel-indicators li {
-  width: 10px;
-  height: 10px;
-  border-radius: 100%; }
